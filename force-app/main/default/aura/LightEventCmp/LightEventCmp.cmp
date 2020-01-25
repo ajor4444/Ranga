@@ -1,0 +1,3 @@
+<aura:component >
+    <c:LightEventCmp1 />
+</aura:component>

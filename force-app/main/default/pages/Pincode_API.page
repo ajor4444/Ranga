@@ -1,0 +1,11 @@
+<apex:page controller="Order_API">
+    <apex:form >
+		<apex:pageBlock title="Check Postal Code">
+            <apex:inputText value="{!Pincode}"/>
+            <apex:CommandButton value="Get Details" action="{!getAddress}"/>
+            <apex:pageBlockTable var="a" value="{!Places}" rendered="{!!ISNULL(Places)}">
+                <apex:column value="{!a}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>    
+    </apex:form>
+</apex:page>

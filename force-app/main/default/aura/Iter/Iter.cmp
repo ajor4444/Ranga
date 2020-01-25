@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="Test" type="List" />
+    <ui:button label="Iteration Testing" press="{!c.iterate}"/>
+    <aura:iteration var="Roja" items="{!v.Test}">
+        <br/><br/>
+        {!Roja.value}
+    </aura:iteration>
+</aura:component>

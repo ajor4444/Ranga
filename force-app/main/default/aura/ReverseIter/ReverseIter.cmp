@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="Reverse" type="List" />
+    <ui:button label="Reverse Iteration" press="{!c.iter}"/>
+    <aura:iteration var="Check" items="{!v.Reverse}">
+        <br/> 
+        <br/>
+        {!Check.value}
+    </aura:iteration>
+</aura:component>

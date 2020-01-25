@@ -1,0 +1,11 @@
+<aura:component controller = "AccountPagination">
+    <aura:attribute name="Accounts" Type="Account[]"/>
+    
+    <ui:button label="Click for Accounts" press="{!c.getacc}"/>
+    
+    <aura:iteration var="Roja" items="{!v.Accounts}">
+        <br/>
+        <br/>
+        {!Roja.Name}
+    </aura:iteration>
+</aura:component>

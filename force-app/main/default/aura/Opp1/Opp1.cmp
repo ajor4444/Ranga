@@ -1,0 +1,9 @@
+<aura:component controller="Controller1" >
+    <aura:attribute name="Opportunities" type="Opportunity[]" />
+    <ui:button label="List of Opp" press="{!c.getopt}" />
+    <aura:iteration var="opt" items="{!v.Opportunities}">
+        <br/>
+        <br/>
+        {!opt.Name}
+    </aura:iteration>
+</aura:component>

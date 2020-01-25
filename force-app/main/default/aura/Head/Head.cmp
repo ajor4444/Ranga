@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="st1" type="String" default="Roja Akash" />
+    
+    <ui:outputtext value="Enter a String Value" />
+    <ui:inputtext value="{!v.st1}" />
+    <br/>
+    <br/>
+    <ui:outputtext value="{#v.st1}"/>
+    
+    <br/>
+    <br/>
+    <ui:outputtext value="{!v.st1}" />
+    
+</aura:component>

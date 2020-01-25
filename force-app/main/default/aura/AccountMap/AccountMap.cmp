@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name = "map" type = "Object"/>
+    <ltng:require styles = "/resource/LeafLet/leaflet.css"
+                  scripts = "/resource/LeafLet/Leaflet.js"
+                  afterScriptsLoaded = "{!c.jsLoaded}"/>
+    
+    <div id = "map">
+    </div>
+                             
+	
+</aura:component>

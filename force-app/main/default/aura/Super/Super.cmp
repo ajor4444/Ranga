@@ -1,0 +1,4 @@
+<aura:component extensible="true">
+    <aura:attribute name="content" type="String" default="Roja Ranga"/>
+    <p> Parent Content: {!v.content}</p>
+</aura:component>

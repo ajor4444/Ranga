@@ -1,0 +1,12 @@
+<aura:component Controller = 'AccountPagination'>
+    <aura:attribute name = "Account" type = "Account"/>
+    <ui:button label = 'Please click me' press = "{!c.getAcc}"/>
+    <aura:iteration var = "A" items ="{!v.Account}" >
+        <br/>
+        {!A.Name}
+        <br/>
+        {!A.Phone}
+        <br/>
+    </aura:iteration>
+                    
+</aura:component>

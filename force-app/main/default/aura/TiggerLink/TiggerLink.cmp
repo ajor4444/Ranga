@@ -1,0 +1,11 @@
+<aura:component >
+	<ui:menu >
+        <ui:menuTriggerLink aura:id="trigger" label="Opp Status"/>
+        <ui:menuList aura:id="actionMenu" class="actionMenu">
+            <ui:actionmenuitem aura:id="item1" label="Roja" />
+            <ui:actionmenuitem aura:id="item2" label="Akash" click="{!c.update}"/>
+            <ui:actionmenuitem aura:id="item3" label="Sarada"/>
+            <ui:actionmenuitem aura:id="item4" label="Dad"/>
+        </ui:menuList>
+    </ui:menu>
+</aura:component>

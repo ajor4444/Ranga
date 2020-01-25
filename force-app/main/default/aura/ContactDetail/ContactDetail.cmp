@@ -1,0 +1,4 @@
+<aura:component access ="global">
+    'Hello world'
+    'Check for the new updates'
+</aura:component>

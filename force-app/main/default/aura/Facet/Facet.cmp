@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute name="A1" type="boolean" default="False" />
+    
+    <aura:if isTrue="{!v.A1}">
+    
+        <ui:button label="True Statement"/>
+        
+        <aura:set attribute="else" >
+        
+        <ui:button label="False Statement" />
+            
+         </aura:set>
+        
+    </aura:if>
+</aura:component>

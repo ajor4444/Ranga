@@ -1,0 +1,3 @@
+<aura:component extends="c:Super" >
+	<p> Child Content : {!v.content}</p>
+</aura:component>

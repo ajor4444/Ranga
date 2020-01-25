@@ -1,0 +1,62 @@
+<aura:component implements= "force:appHostable" access= "global" Controller = "PaginationController" >
+    <aura:attribute name = "ContactData" type = "Object" />
+    <aura:attribute name = "Columns" type ="List"/>
+    <aura:attribute name = "isSending" type = "boolean"/>
+    <aura:attribute name = "PaginationList" type = "Contact"/>
+    <aura:attribute name = "StartPage" type = "Integer"/>
+    <aura:attribute name = "EndPage" type = "Integer"/>
+    <aura:attribute name = "TotalRecords" type = "Integer"/>
+    <aura:attribute name = "PageSize" type = "Integer" default = "5"/>
+    
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/>
+    <!--Spinner-->
+    
+    <aura:if isTrue="{!v.isSending}">
+        <div class = "slds-spinner_container">
+       	<div class = "slds-spinner--brand slds-spinner slds-spinner--large" role = "alert">
+        <span class = "slds-assistive-text">Loading 
+        </span>    
+      	<div class = "slds-spinner__dot-a"></div>      
+        <div class = "slds-spinner__dot-b"></div>
+        </div> 
+        </div>
+        </aura:if>
+    
+    
+    <div class = "slds-page-header">
+    	<div class = "slds-media">
+        	<div class = "slds-media__figure">
+            <span class = "slds-icon__container slds-icon-standard-opportunity"
+                  title = "Description of the icon when needed">
+                </span>
+            </div>
+            <div class = "slds-media__body">
+            	<h1 class = "slds-page-header__title slds-truncate slds-align-middle"
+                    title = "Pagination Demo">Pagination Demo </h1>
+                <p class = "slds-text-body__small slds-line-height__reset">
+                    By- Roja Ranga . 2/7/18
+                </p>
+            </div>
+        </div>
+    </div>
+	
+    <div class = "slds-m-top_medium">
+    	<lightning:datatable  data= "{!v.paginationList}"
+                             class = "slds-m-top_medium"
+                             columns = "{!v.columns}"
+                             keyfield = "id"
+                             onrowselection = "{!c.getSelectedName}"/>
+        <br/>
+        <lightning:buttonGroup >
+        	<lightning:button label = "Previous" disabled = "{!v.startPage ==0}"
+                              onclick = "{!c.previous}"
+                              variant = "desctructive"
+                              iconName = "utility:back"/>
+            &nbsp; &nbsp; &nbsp; 
+            <lightning:button label = "Next" disabled = "{!v.endpage>=v.totalRecords}"
+                              onclick = "{!c.next}" 
+                              variant = "brand"
+                              iconName = "utility:forward" iconPosition = 'right'/>
+        </lightning:buttonGroup>
+    </div>
+</aura:component>

@@ -1,0 +1,24 @@
+<apex:page controller="Calc">
+<apex:form >
+<apex:inputText value="{!number1}" id="num1"/>
+    <br/>
+    <br/>
+<apex:inputText value="{!number2}" id="num2"/>
+    <br/>
+    <br/>
+<apex:inputText value="{!operator}"/>
+    <br/> 
+    <br/>
+<apex:commandButton value="Calculate"
+                    action="{!calculation}"> <br/>
+    <br/>{!result}</apex:commandButton>
+    <Script type = "text/javascript">
+        function check(){
+        var numberx = document.getElementById("num1").value;
+        var numbery = document.getElementById("num2"),value;
+        }
+    </Script>
+   
+    
+</apex:form>
+</apex:page>

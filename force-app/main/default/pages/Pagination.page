@@ -1,0 +1,19 @@
+<apex:page controller="Pagination">
+    <apex:form >
+        <apex:PageBlock >
+    	<apex:PageBlockButtons location="Top">
+            <apex:commandButton value="First" action="{!Controller.First}" rendered="{!Controller.hasPrevious}" />
+            <apex:commandButton value="Last" action="{!Controller.Last}" rendered="{!Controller.hasNext}"/>
+            <apex:commandButton value="Next" action="{!Controller.Next}" rendered="{!Controller.hasNext}"/>
+            <apex:commandButton value="Previous" action="{!Controller.Previous}" rendered="{!Controller.hasPrevious}"/>
+        </apex:PageBlockButtons>
+            <apex:pageBlockTable value="{!List}" var="R" >
+                <apex:column value="{!R.Name__c}"/>
+                <apex:column value="{!R.Billing_City__c}" />
+            </apex:pageBlockTable>
+            <centre>  {!Controller.PageNumber*2} of {!Controller.resultSize} </centre>
+            	
+            
+        </apex:PageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,15 @@
+<aura:component >
+	<h3> Roja </h3>
+    <h5> Ranga </h5>
+    
+    <div class = "R" > Check 1</div>
+    <div class ="O" >Check 2</div>
+    <div class ="J" >Check 3</div>
+    <div class = "A">Check 4</div>
+    <aura:attribute name="a1" type="Integer" default="10"/>
+    <aura:attribute name="a2" type="Integer" default="15"/>
+    <aura:attribute name="add" type="Integer" />
+    {!v.a1}+{!v.a2} = {!v.add}
+    <br/><br/>
+    <ui:button label="Press here for addition" press="{!c.add}" />
+</aura:component>
